@@ -8,7 +8,7 @@
 #include "polyscope/utilities.h"
 #include "polyscope/widget.h"
 #include "polyscope/slice_plane.h"
-
+#include "polyscope/mesh_subset.h"
 #include "imgui.h"
 
 #include <functional>
@@ -61,6 +61,21 @@ extern std::vector<SlicePlane*> slicePlanes;
 
 // a callback function used to render a "user" gui
 extern std::function<void()> userCallback;
+
+//User-assigned Show Selected Function
+extern std::function<void()> Show_Selected;
+
+// CHANGED: for LadyBird, to keep track of selected elements
+extern size_t facePickIndStart;
+extern size_t edgePickIndStart;
+extern size_t halfedgePickIndStart;
+extern MeshSubset subset;
+extern int currVertexIndex;
+extern int currFaceIndex;
+extern int currEdgeIndex;
+extern int deleteVertexIndex;
+extern int deleteFaceIndex;
+extern int deleteEdgeIndex;
 
 } // namespace state
 
